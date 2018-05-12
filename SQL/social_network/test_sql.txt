@@ -1,0 +1,6 @@
+select *
+from friend
+except
+select A.ID1, A.ID2 
+from Likes A, Likes B
+where A.ID2 = B.ID1 AND A.ID1 = B.ID2
